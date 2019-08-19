@@ -49,7 +49,7 @@ const StyledNavbar = styled(Navbar)`
   position: relative;
   z-index: 2;
   .btn-nav {
-    position: absolute;
+    position: fixed;
     right: 10px;
     top: 10px;
     cursor: pointer;
