@@ -1,6 +1,15 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import cn from "classnames";
+import {
+  FaReact,
+  FaHtml5,
+  FaCss3Alt,
+  FaJsSquare,
+  FaNodeJs,
+  FaGitSquare,
+  FaNpm
+} from "react-icons/fa";
 
 import ContentWrapper from "./ContentWrapper";
 import face from "../img/face.jpg";
@@ -45,13 +54,17 @@ const Bio = ({ className }) => {
               <li>
                 <span className="skill-category">Hard</span>
                 <ul>
-                  <li>HTML</li>
-                  <li>CSS</li>
                   <li>
-                    JS
+                    HTML <FaHtml5 color={style.highlightText} />
+                  </li>
+                  <li>
+                    CSS <FaCss3Alt color={style.highlightText} />
+                  </li>
+                  <li>
+                    JS <FaJsSquare color={style.highlightText} />
                     <ul>
                       <li>
-                        React
+                        React <FaReact color={style.highlightText} />
                         <ul>
                           <li>React Router</li>
                           <li>Styled Components</li>
@@ -65,7 +78,7 @@ const Bio = ({ className }) => {
                         </ul>
                       </li>
                       <li>
-                        NodeJS
+                        NodeJS <FaNodeJs color={style.highlightText} />
                         <ul>
                           <li>Express.js</li>
                         </ul>
@@ -75,8 +88,12 @@ const Bio = ({ className }) => {
                   <li>
                     Other
                     <ul>
-                      <li>Git</li>
-                      <li>npm</li>
+                      <li>
+                        Git <FaGitSquare color={style.highlightText} />
+                      </li>
+                      <li>
+                        npm <FaNpm color={style.highlightText} />
+                      </li>
                       <li>Basics of Webpack</li>
                       <li>B2 English</li>
                     </ul>

@@ -24,10 +24,9 @@ const Navbar = ({ className, location }) => {
             home
           </Link>
         </li>
-
         <li>
-          <Link to="/contacts" onClick={onNavBtnClick}>
-            contacts
+          <Link to="/bio" onClick={onNavBtnClick}>
+            bio
           </Link>
         </li>
         <li>
@@ -36,8 +35,8 @@ const Navbar = ({ className, location }) => {
           </Link>
         </li>
         <li>
-          <Link to="/bio" onClick={onNavBtnClick}>
-            bio
+          <Link to="/contacts" onClick={onNavBtnClick}>
+            contacts
           </Link>
         </li>
       </ul>
