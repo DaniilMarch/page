@@ -11,109 +11,105 @@ import {
   FaNpm
 } from "react-icons/fa";
 
-import ContentWrapper from "./ContentWrapper";
 import face from "../img/face.jpg";
 import style from "../config/style";
 
 const Bio = ({ className }) => {
-  const [unmounted, mount] = useState(true);
+  const [mounted, mount] = useState(false);
   useEffect(() => {
-    mount(false);
-    return () => mount(true);
+    const id = setTimeout(() => mount(true), 0);
+    return () => clearTimeout(id);
   }, []);
   return (
-    <ContentWrapper>
-      <div className={cn(className, { unmounted })}>
-        <h1 className="display">Bio</h1>
-        <div className="header">
-          <img src={face} />
+    <div className={cn(className, { mounted })}>
+      <h1 className="display">Bio</h1>
+      <div className="header">
+        <img src={face} alt="Avatar" />
 
-          <div className="bio">
-            <h1 className="section-header">Daniil Marchenkov</h1>
-            <p className="section-content">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae
-              quo itaque perferendis, repellat, deleniti veritatis quasi
-              aliquid, consequatur cum doloremque nam porro voluptatum
-              accusantium distinctio alias inventore labore nihil molestiae.
-            </p>
-          </div>
-        </div>
-        <div className="education">
-          <h1 className="section-header">Education</h1>
+        <div className="bio">
+          <h1 className="section-header">Daniil Marchenkov</h1>
           <p className="section-content">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nulla
-            voluptas architecto laborum, quibusdam dolore totam, ex eius
-            assumenda eum nisi eligendi cupiditate. Sunt vero quae velit ipsum
-            nam earum.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae quo
+            itaque perferendis, repellat, deleniti veritatis quasi aliquid,
+            consequatur cum doloremque nam porro voluptatum accusantium
+            distinctio alias inventore labore nihil molestiae.
           </p>
         </div>
-        <div className="skills">
-          <h1 className="section-header">Skills</h1>
-          <div className="section-content">
-            <ul>
-              <li>
-                <span className="skill-category">Hard</span>
-                <ul>
-                  <li>
-                    HTML <FaHtml5 color={style.highlightText} />
-                  </li>
-                  <li>
-                    CSS <FaCss3Alt color={style.highlightText} />
-                  </li>
-                  <li>
-                    JS <FaJsSquare color={style.highlightText} />
-                    <ul>
-                      <li>
-                        React <FaReact color={style.highlightText} />
-                        <ul>
-                          <li>React Router</li>
-                          <li>Styled Components</li>
-                        </ul>
-                      </li>
-                      <li>
-                        Redux
-                        <ul>
-                          <li>Redux Form</li>
-                          <li>Redux Thunk, Redux Saga</li>
-                        </ul>
-                      </li>
-                      <li>
-                        NodeJS <FaNodeJs color={style.highlightText} />
-                        <ul>
-                          <li>Express.js</li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    Other
-                    <ul>
-                      <li>
-                        Git <FaGitSquare color={style.highlightText} />
-                      </li>
-                      <li>
-                        npm <FaNpm color={style.highlightText} />
-                      </li>
-                      <li>Basics of Webpack</li>
-                      <li>B2 English</li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <span className="skill-category">Soft</span>
-                <ul>
-                  <li>Responsible</li>
-                  <li>Open-minded</li>
-                  <li>Fast learner</li>
-                  <li>Problem solver</li>
-                </ul>
-              </li>
-            </ul>
-          </div>
+      </div>
+      <div className="education">
+        <h1 className="section-header">Education</h1>
+        <p className="section-content">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nulla
+          voluptas architecto laborum, quibusdam dolore totam, ex eius assumenda
+          eum nisi eligendi cupiditate. Sunt vero quae velit ipsum nam earum.
+        </p>
+      </div>
+      <div className="skills">
+        <h1 className="section-header">Skills</h1>
+        <div className="section-content">
+          <ul>
+            <li>
+              <span className="skill-category">Hard</span>
+              <ul>
+                <li>
+                  HTML <FaHtml5 color={style.highlightText} />
+                </li>
+                <li>
+                  CSS <FaCss3Alt color={style.highlightText} />
+                </li>
+                <li>
+                  JS <FaJsSquare color={style.highlightText} />
+                  <ul>
+                    <li>
+                      React <FaReact color={style.highlightText} />
+                      <ul>
+                        <li>React Router</li>
+                        <li>Styled Components</li>
+                      </ul>
+                    </li>
+                    <li>
+                      Redux
+                      <ul>
+                        <li>Redux Form</li>
+                        <li>Redux Thunk, Redux Saga</li>
+                      </ul>
+                    </li>
+                    <li>
+                      NodeJS <FaNodeJs color={style.highlightText} />
+                      <ul>
+                        <li>Express.js</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  Other
+                  <ul>
+                    <li>
+                      Git <FaGitSquare color={style.highlightText} />
+                    </li>
+                    <li>
+                      npm <FaNpm color={style.highlightText} />
+                    </li>
+                    <li>Basics of Webpack</li>
+                    <li>B2 English</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <span className="skill-category">Soft</span>
+              <ul>
+                <li>Responsible</li>
+                <li>Open-minded</li>
+                <li>Fast learner</li>
+                <li>Problem solver</li>
+              </ul>
+            </li>
+          </ul>
         </div>
       </div>
-    </ContentWrapper>
+    </div>
   );
 };
 
@@ -123,8 +119,8 @@ const StyledBio = styled(Bio)`
   justify-content: center;
   align-items: center;
   width: 80%;
-  transform: translate(0px);
-  opacity: 1;
+  transform: translate(1000px);
+  opacity: 0;
   transition: all 0.2s ease-in;
   .section-header {
     font-size: 2rem;
@@ -134,6 +130,7 @@ const StyledBio = styled(Bio)`
   .section-content {
     text-align: justify;
     text-indent: 20px;
+
     ul {
       text-indent: 0px;
       list-style: none;
@@ -172,9 +169,9 @@ const StyledBio = styled(Bio)`
       }
     }
   }
-  &.unmounted {
-    transform: translate(1000px);
-    opacity: 0;
+  &.mounted {
+    transform: translate(0px);
+    opacity: 1;
   }
   .display {
     font-size: 4rem;
@@ -204,9 +201,6 @@ const StyledBio = styled(Bio)`
       content: "";
       clear: both;
     }
-    .bio {
-      padding: 5px 20px;
-    }
   }
 
   @media screen and (min-width: 768px) {
@@ -229,6 +223,7 @@ const StyledBio = styled(Bio)`
         float: left;
       }
       .bio {
+        padding: 5px 20px;
       }
     }
   }

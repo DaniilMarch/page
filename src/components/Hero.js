@@ -2,25 +2,25 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import cn from "classnames";
 
-import ContentWrapper from "./ContentWrapper";
 import style from "../config/style";
 
 const Hero = ({ className }) => {
   const [mounted, mount] = useState(false);
-  useEffect(() => mount(true), []);
+  useEffect(() => {
+    const id = setTimeout(() => mount(true), 0);
+    return () => clearTimeout(id);
+  }, []);
   return (
-    <ContentWrapper>
-      <div className={cn(className, { mounted })}>
-        <h1>
-          <span className="word-1">Daniil</span>{" "}
-          <span className="word-2">Bereznev</span>
-        </h1>
-        <p>
-          <span className="word-3">Front-end</span>{" "}
-          <span className="word-4">developer</span>
-        </p>
-      </div>
-    </ContentWrapper>
+    <div className={cn(className, { mounted })}>
+      <h1>
+        <span className="word-1">Daniil</span>{" "}
+        <span className="word-2">Bereznev</span>
+      </h1>
+      <p>
+        <span className="word-3">Front-end</span>{" "}
+        <span className="word-4">developer</span>
+      </p>
+    </div>
   );
 };
 
@@ -74,12 +74,14 @@ const StyledHero = styled(Hero)`
       font-size: 6rem;
       color: ${style.highlightText};
       margin: 10px;
+      text-align: left;
     }
     p {
       font-size: 2rem;
       margin: 10px;
       background-color: ${style.secondaryDarker};
       padding: 10px;
+      text-align: left;
     }
   }
 `;

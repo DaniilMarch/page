@@ -5,12 +5,11 @@ import { Link, withRouter } from "react-router-dom";
 
 import style from "../config/style";
 
-const Navbar = ({ className, location }) => {
+const Navbar = ({ className }) => {
   const [open, toggle] = useState(false);
   const onNavBtnClick = () => {
     toggle(!open);
   };
-  console.log(location);
   return (
     <div className={className}>
       <div className={cn("btn-nav", { open })} onClick={onNavBtnClick}>
@@ -46,7 +45,6 @@ const Navbar = ({ className, location }) => {
 
 const StyledNavbar = styled(Navbar)`
   position: relative;
-  z-index: 2;
   .btn-nav {
     position: fixed;
     right: 10px;
@@ -102,8 +100,10 @@ const StyledNavbar = styled(Navbar)`
     display: flex;
     flex-direction: column;
     position: fixed;
+    z-index: -1;
 
     &.open {
+      z-index: 1;
       li {
         transform: translate(0);
       }
@@ -148,8 +148,6 @@ const StyledNavbar = styled(Navbar)`
     }
   }
 
-  @media screen and (min-width: 768px) {
-  }
   @media screen and (min-width: 992px) {
     .navbar-list {
       height: 60px;
