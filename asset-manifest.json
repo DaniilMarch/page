@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.js": "/page/static/js/main.28571996.chunk.js",
+    "main.js.map": "/page/static/js/main.28571996.chunk.js.map",
+    "runtime~main.js": "/page/static/js/runtime~main.2bdf8e49.js",
+    "runtime~main.js.map": "/page/static/js/runtime~main.2bdf8e49.js.map",
+    "static/css/2.764ccc25.chunk.css": "/page/static/css/2.764ccc25.chunk.css",
+    "static/js/2.1f861d4b.chunk.js": "/page/static/js/2.1f861d4b.chunk.js",
+    "static/js/2.1f861d4b.chunk.js.map": "/page/static/js/2.1f861d4b.chunk.js.map",
+    "index.html": "/page/index.html",
+    "precache-manifest.6c044ec2ae05b39183b6c9c0d3b94002.js": "/page/precache-manifest.6c044ec2ae05b39183b6c9c0d3b94002.js",
+    "service-worker.js": "/page/service-worker.js",
+    "static/css/2.764ccc25.chunk.css.map": "/page/static/css/2.764ccc25.chunk.css.map",
+    "static/media/bookkeeper.png": "/page/static/media/bookkeeper.164e7ee7.png",
+    "static/media/bookkeeper.gif": "/page/static/media/bookkeeper.527df5b2.gif",
+    "static/media/face.jpg": "/page/static/media/face.99e739a1.jpg",
+    "static/media/hangman.png": "/page/static/media/hangman.52834a55.png",
+    "static/media/hangman.gif": "/page/static/media/hangman.70d6679f.gif",
+    "static/media/picshare.png": "/page/static/media/picshare.55b5f9c8.png",
+    "static/media/picsharegif.gif": "/page/static/media/picsharegif.496e28db.gif",
+    "static/media/smalltalk.png": "/page/static/media/smalltalk.5b16405d.png",
+    "static/media/smalltalkgif.gif": "/page/static/media/smalltalkgif.6beb1bcd.gif",
+    "static/media/test-taskgif.gif": "/page/static/media/test-taskgif.6f773d42.gif",
+    "static/media/test-taskj.png": "/page/static/media/test-taskj.dbb33bb5.png",
+    "static/media/tgbot.png": "/page/static/media/tgbot.ab7f47c0.png"
+  }
+}
