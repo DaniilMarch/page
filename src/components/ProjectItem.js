@@ -10,7 +10,7 @@ const ProjectItem = ({ className, img, gif, header, desc, github }) => {
       <h1 className="project-header">{header}</h1>
       <div className="project-desc">{desc}</div>
       <div className="image-container" />
-      <a className="project-link" href={github}>
+      <a className="project-link" href={github} target="_blank">
         GitHub <FaGithub />
       </a>
     </div>
@@ -28,7 +28,7 @@ const StyledProjectItem = styled(ProjectItem)`
     background: url(${props => props.img});
     background-size: cover;
     &:hover {
-      background: url(${props => props.gif});
+      background: url(${props => (props.gif ? props.gif : props.img)});
       background-size: cover;
     }
   }
@@ -40,6 +40,7 @@ const StyledProjectItem = styled(ProjectItem)`
     text-align: center;
     box-sizing: border-box;
     color: inherit;
+    text-decoration: none;
     &:hover {
       color: ${style.secondaryDarker};
       background-color: ${style.mainText};

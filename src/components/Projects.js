@@ -13,6 +13,7 @@ import testtask from "../img/test-taskj.png";
 import testtaskgif from "../img/test-taskgif.gif";
 import hangman from "../img/hangman.png";
 import hangmangif from "../img/hangman.gif";
+import tgbot from "../img/tgbot.png";
 import ProjectItem from "./ProjectItem";
 
 const Projects = ({ className }) => {
@@ -31,30 +32,41 @@ const Projects = ({ className }) => {
           gif={picsharegif}
           header="picshare"
           desc="Small social network for sharing images"
+          github="https://github.com/DaniilMarch/picshare"
         />
         <ProjectItem
           img={smalltalk}
           gif={smalltalkgif}
           header="smalltalk"
           desc="Chat server and client built with NodeJS, Express.js and socket.io"
+          github="https://github.com/DaniilMarch/smalltalk"
         />
         <ProjectItem
           img={bookkeeper}
           gif={bookkeepergif}
           header="bookkeeper"
           desc="App for keeping track of read books"
+          github="https://github.com/DaniilMarch/bookkeeper"
         />
         <ProjectItem
           img={testtask}
           gif={testtaskgif}
           header="message sender"
           desc="Test task made for some job application"
+          github="https://github.com/DaniilMarch/test-task"
         />
         <ProjectItem
           img={hangman}
           gif={hangmangif}
           header="hangman"
           desc="The hangman game about guessing words"
+          github="https://github.com/DaniilMarch/the-hangman-game"
+        />
+        <ProjectItem
+          img={tgbot}
+          header="hangman bot"
+          desc="Telegram bot who knows how to play the hangman game"
+          github="https://github.com/DaniilMarch/the-hangman-bot"
         />
       </div>
     </div>

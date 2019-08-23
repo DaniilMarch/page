@@ -27,21 +27,25 @@ const Bio = ({ className }) => {
         <img src={face} alt="Avatar" />
 
         <div className="bio">
-          <h1 className="section-header">Daniil Marchenkov</h1>
+          <h1 className="section-header">Daniil Bereznev</h1>
+          <p className="section-content">Location: Saint-Petersburg, Russia</p>
           <p className="section-content">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae quo
-            itaque perferendis, repellat, deleniti veritatis quasi aliquid,
-            consequatur cum doloremque nam porro voluptatum accusantium
-            distinctio alias inventore labore nihil molestiae.
+            Aspiring front-end developer with proficiency in wide range of
+            modern web technologies like React, Redux, Styled Components and
+            others. Currenly looking for employment opportunities, always ready
+            to learn more, improve and communicate.
           </p>
         </div>
       </div>
       <div className="education">
         <h1 className="section-header">Education</h1>
         <p className="section-content">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nulla
-          voluptas architecto laborum, quibusdam dolore totam, ex eius assumenda
-          eum nisi eligendi cupiditate. Sunt vero quae velit ipsum nam earum.
+          Final year student at{" "}
+          <a href="https://english.spbstu.ru/" target="_blank">
+            SPbSTU
+          </a>
+          , Institute of Civil Engineering, department Construction of Unique
+          Building and Structures
         </p>
       </div>
       <div className="skills">
@@ -130,6 +134,9 @@ const StyledBio = styled(Bio)`
   .section-content {
     text-align: justify;
     text-indent: 20px;
+    a {
+      color: ${style.highlightText};
+    }
 
     ul {
       text-indent: 0px;
