@@ -19,7 +19,7 @@ const Navbar = ({ className }) => {
       </div>
       <ul className={cn("navbar-list", { open })}>
         <li>
-          <Link to="/" onClick={onNavBtnClick}>
+          <Link to="/page" onClick={onNavBtnClick}>
             home
           </Link>
         </li>
