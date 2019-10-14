@@ -18,15 +18,15 @@ const Contacts = ({ className }) => {
       <div className="content">
         <p>Email: Daniil2305@yandex.ru</p>
         <p>Phone: +7-921-340-4201</p>
-        <p>
-          Social links:{" "}
+        <p>Social links: </p>
+        <div className="social-links-icons">
           <a href="https://github.com/DaniilMarch" target="_blank">
             <FaGithub color={style.highlightText} />
           </a>{" "}
           <a href="https://t.me/dtrmnd" target="_blank">
             <FaTelegram color={style.highlightText} />
           </a>
-        </p>
+        </div>
       </div>
     </div>
   );
@@ -53,9 +53,11 @@ const StyledContacts = styled(Contacts)`
     margin: 10px;
     z-index: 10;
   }
+
   a {
     color: inherit;
     z-index: 1000;
+    font-size: 3rem;
   }
   @media screen and (min-width: 768px) {
     h1 {
@@ -72,6 +74,10 @@ const StyledContacts = styled(Contacts)`
     }
     p {
       font-size: 2rem;
+    }
+    .social-links-icons {
+      font-size: 1rem;
+      margin-left: 10px;
     }
   }
 `;

@@ -24,7 +24,7 @@ const Bio = ({ className }) => {
     <div className={cn(className, { mounted })}>
       <h1 className="display">Bio</h1>
       <div className="header">
-        <img src={face} alt="Avatar" />
+        <div className="avatar"></div>
 
         <div className="bio">
           <h1 className="section-header">Daniil Bereznev</h1>
@@ -82,8 +82,10 @@ const Bio = ({ className }) => {
                       NodeJS <FaNodeJs color={style.highlightText} />
                       <ul>
                         <li>Express.js</li>
+                        <li>GraphQL</li>
                       </ul>
                     </li>
+                    <li>three.js</li>
                   </ul>
                 </li>
                 <li>
@@ -151,6 +153,7 @@ const StyledBio = styled(Bio)`
         padding: 0 7px;
         line-height: 30px;
         border-left: 1px solid ${style.highlightText};
+        text-align: left;
         &:last-child {
           border-left: none;
           &::before {
@@ -194,7 +197,7 @@ const StyledBio = styled(Bio)`
 
     padding: 10px;
     margin-bottom: 10px;
-    img {
+    .avatar {
       border: 6px solid ${style.highlightDarker};
       border-radius: 50%;
       width: 180px;
@@ -202,6 +205,8 @@ const StyledBio = styled(Bio)`
       border-radius: 50%;
       display: block;
       margin: 20px;
+      overflow: hidden;
+      background: no-repeat center/100% url(${face});
     }
     &::after {
       display: block;
@@ -226,7 +231,7 @@ const StyledBio = styled(Bio)`
       border: 1px solid ${style.secondary};
       border-radius: 10px;
       display: block;
-      img {
+      .avatar {
         float: left;
       }
       .bio {
