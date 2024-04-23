@@ -5,7 +5,7 @@
   "homepage": "https://daniilmarch.github.io/page/",
   "dependencies": {
     "classnames": "^2.2.6",
-    "gh-pages": "^2.1.1",
+    "gh-pages": "^5.0.0",
     "normalize.css": "^8.0.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
